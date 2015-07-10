@@ -4,29 +4,58 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Can you name Iowa's 99 counties?</title>
-        <!--link rel="stylesheet" href="css/style.css" -->
         <style>
-#answers td {
-    width:11%;
+table {
+	border-collapse:separate;
+	border-spacing:1px;
+}
+
+td {
+    width:25%;
     text-align:center;
+	color:white;
+	padding:1em;
+}
+
+#answers td {
+	background-color: #00cc99;
+}
+
+#unanswers td {
+	background-color: #ff6666;
+}
+
+#surrender {
+	color:white;
+	background-color:#ff6666;
+	padding:0.5em;
+	border-radius:6px;
 }
         </style>
     </head>
     <body>
         <header>
             <h1>Can you name all 99 Iowa counties?</h1>
-            <p>Let's see ... </p>
+            <p id="score">Let's see ... </p>
         </header>
         <div id="input-div" onkeyup="Quiz.getText();">
             <input type="text" id="input" autofocus></input>
+			<input type="button" value="Give up?" id="surrender" onclick="Quiz.endQuiz();" />
         </div>
         <div id="timer"></div>
-        <input type="button" value="Give up?" id="surrender" onclick="Quiz.endQuiz();" />
+        
         <div id="counter"></div>
         <div id="answers-div">
             <table id="answers">
-                <tr></tr>
+				<tbody>
+					<tr></tr>
+				</tbody>
             </table>
+			<table id="unanswers">
+				<tbody>
+					<tr></tr>
+				</tbody>
+			</table>
         </div>
         <script src="data.js"></script>
         <script src="fill-in-quiz.js"></script>
