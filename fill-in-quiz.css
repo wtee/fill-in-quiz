@@ -1,0 +1,14 @@
+#answer-div li {
+    display:inline-block;
+    margin:0.25em;
+    padding:0.75em;
+    color:#fffafa;
+}
+
+#answers li {
+    background-color:#0bda51;
+}
+
+#unanswers li {
+    background-color:#a52a2a;
+}
